@@ -12,7 +12,7 @@ app.set('trust proxy', 1)
 app.set('port', process.env.PORT || portForDev)
 
 // テンプレートエンジン設定
-app.set('views', './views')
+app.set('views', './app/views')
 app.set('view engine', 'ejs')
 
 // 使用技術隠蔽
