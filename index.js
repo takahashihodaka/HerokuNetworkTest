@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express')
+const router = require('./router')
 const app = express()
 const portForDev = 4000
 
@@ -10,11 +11,7 @@ app.set('port', process.env.PORT || portForDev)
 
 app.disable('x-powered-by')
 
-app.get('/',(req, res) => {
-  res.send('Network Test' + req.ip)
-  console.log(req.ip)
-  console.log(req.ips)
-})
+app.use(router)
 
 // サーバを立てる
 app.listen(app.get('port'), () => {
