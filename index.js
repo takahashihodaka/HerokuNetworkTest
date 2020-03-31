@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const portForDev = 4000
 
-//app.set('trust proxy', 1)
+app.set('trust proxy', 1)
 
 app.set('port', process.env.PORT || portForDev)
 
