@@ -1,9 +1,7 @@
 const router = require('express').Router()
 
 router.get('/',(req, res) => {
-  res.send('Network Test' + req.ip)
-  console.log(req.ip)
-  console.log(req.ips)
+  res.render('main', {remoteIp: req.ip})
 })
 
 module.exports = router
